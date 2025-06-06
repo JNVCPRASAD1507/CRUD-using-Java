@@ -1,13 +1,13 @@
-# Use a base image with Java
-FROM openjdk:17-jdk-slim
+# Use a Java 21 base image
+FROM openjdk:21-jdk-slim
 
-# Set the working directory inside the container
+# Set working directory inside the container
 WORKDIR /app
 
-# Copy the jar file (adjust the name of your jar file if needed)
+# Copy the Spring Boot jar file
 COPY target/*.jar app.jar
 
-# Expose the port your app runs on
+# Expose the port the app runs on
 EXPOSE 8080
 
 # Run the jar file
